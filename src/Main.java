@@ -60,6 +60,8 @@ public class Main {
                     break;
                 case "0":
                     break;
+                default:
+                    System.out.println("Neteisingas pasirinkimas, bandykite dar kartą.");
             }
         } while (!choice.equals("0"));
 
