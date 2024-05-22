@@ -21,7 +21,7 @@ public class Main {
 //                Išvesti laimėjusį žaidėją į ekraną
 
         String[] kortosTipas = new String[] {"CLUBS", "DIAMONDS", "HEARTS", "SPADES"};
-        String[] kortos = new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
+        String[] kortos = new String[] {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
         List<Korta> kortuKalade = new ArrayList<>();
         for(int i = 0; i < kortosTipas.length; i++){
             for(int j = 0; j < kortos.length; j++){
@@ -116,12 +116,9 @@ public class Main {
     }
 
     public static int kortosVerte(Korta korta){
-        //int[] kortaVerte = new int[] {1,2,3,4,5,6,7,8,9,10,10,10,10,11};
+        //int[] kortaVerte = new int[] {2,3,4,5,6,7,8,9,10,10,10,10,11};
         int kortaVerte = 0;
         switch(korta.getKuriKorta()){
-            case "1":
-                kortaVerte = 1;
-                break;
             case "2":
                 kortaVerte = 2;
                 break;
