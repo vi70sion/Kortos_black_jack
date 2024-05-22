@@ -88,7 +88,7 @@ public class Main {
         return temp;
     }
 
-    public static void isrinkNugaletoja(Zaidejas zaidejas1, Zaidejas zaidejas2){
+    public static Zaidejas isrinkNugaletoja(Zaidejas zaidejas1, Zaidejas zaidejas2){
         int sum1 = 0, sum2 = 0;
         for(int i = 0; i < zaidejas1.getZaidejoKortos().size(); i++){
             sum1 += kortosVerte(zaidejas1.getZaidejoKortos().get(i));
@@ -97,9 +97,18 @@ public class Main {
             sum2 += kortosVerte(zaidejas2.getZaidejoKortos().get(i));
         }
         System.out.println();
-        if(sum1 > sum2) System.out.println("Laimėjo pirmas žaidėjas!");
-         else if (sum1 < sum2) System.out.println("Laimėjo antras žaidėjas!");
-         else System.out.println("Lygiosios");
+        if(sum1 > sum2) {
+            System.out.println("Laimėjo pirmas žaidėjas!");
+            return zaidejas1;
+        }
+         else if (sum1 < sum2) {
+             System.out.println("Laimėjo antras žaidėjas!");
+             return  zaidejas2;
+        }
+         else {
+             System.out.println("Lygiosios");
+             return null;
+        }
 
 
     }
